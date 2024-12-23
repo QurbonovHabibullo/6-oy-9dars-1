@@ -1,0 +1,6 @@
+
+<ul>
+    {% for category in all_categories %}
+    <li><a href="{% url 'flowers_by_category' category.id %}">{{ category.name }}</a></li>
+    {% endfor %}
+</ul>

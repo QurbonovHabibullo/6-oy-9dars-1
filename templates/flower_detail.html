@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ flower.name }}</h2>
+<p>Tavsif: {{ flower.description }}</p>
+<p>Narxi: {{ flower.price }} so'm</p>
+<a href="{% url 'flowers_by_category' flower.category.id %}">Ortga qaytish</a>
+{% endblock %}
+

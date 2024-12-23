@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ category.name }} Kategoriyasidagi Gullar</h2>
+<ul>
+    {% for flower in flowers %}
+    <li>
+        <a href="{% url 'flower_detail' flower.id %}">{{ flower.name }}</a> 
+        - Narxi: {{ flower.price }} so'm
+    </li>
+    {% empty %}
+    <li>Bu kategoriyada hech qanday gul yo'q.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

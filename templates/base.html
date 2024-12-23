@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers Project</title>
+</head>
+<body>
+    <header>
+        <h1>Flowers Project</h1>
+        {% load tags %}
+        <nav>
+            {% all_categories %}
+        </nav>
+        <a href="{% url 'flower_list' %}">Barcha Gullar</a>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
